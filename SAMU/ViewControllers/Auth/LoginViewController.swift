@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.imgVwLogo.setImageColor(color: UIColor.blue)
         // Do any additional setup after loading the view.
     }
