@@ -19,7 +19,11 @@
 					<string>Main</string>
 				</dict>
 			</array>
-		</dict>
 	</dict>
+    </dict>
+    <key>NSLocationUsageDescription</key>
+    <string></string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string></string>
 </dict>
 </plist>

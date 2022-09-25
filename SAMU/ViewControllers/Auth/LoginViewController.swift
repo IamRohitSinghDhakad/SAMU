@@ -27,9 +27,10 @@ class LoginViewController: UIViewController {
         
     }
     @IBAction func btnForgotPassword(_ sender: Any) {
-        
+        self.pushVc(viewConterlerId: "ForgotPasswordViewController")
     }
+    
     @IBAction func btnDontHaveAccount(_ sender: Any) {
-        
+        pushVc(viewConterlerId: "SignUpViewController")
     }
 }

@@ -9,34 +9,20 @@ import Foundation
 import UIKit
 
 
-let BASE_URL = "https://ambitious.in.net/Arun/upeAKMe/index.php/api/"//Local
-//let BASE_URL = "https://servi-line.info/index.php/api/"//Live
-
+let BASE_URL = "https://ambitious.in.net/Arun/samu/index.php/api/"//Local
 
 struct WsUrl{
     static let url_Login  = BASE_URL + "login"
     static let url_SignUp  = BASE_URL + "signup"
-    static let url_SocialLogin  = BASE_URL + "social_login"
-    static let url_getDesired = BASE_URL + "get_desired"
-    static let url_getDesiredPosition = BASE_URL + "get_desired_position"
-    static let url_GetNation = BASE_URL + "get_nation"
-    static let url_GetCommunity = BASE_URL + "get_community"
-    static let url_getProvince = BASE_URL + "get_province"
-    static let url_getMunicipality = BASE_URL + "get_municipality"
-    static let url_completeProfile = BASE_URL + "complete_profile"
-    static let url_forgotPassword = BASE_URL + "forgot_password"
-    static let url_GetUserList = BASE_URL + "get_users"
+    static let url_GetBanner  = BASE_URL + "get_banner"
+    static let url_GetCategory = BASE_URL + "get_category"
     static let url_GetProfile = BASE_URL + "get_profile"
     static let url_Logout = BASE_URL + "logout"
 }
-//Api check for params
 
 struct WsParamsType {
-
     static let PathVariable = "Path Variable"
-
     static let QueryParams = "Query Params"
-
 }
 
 //Api Header
