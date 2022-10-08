@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     @IBAction func btnGetStarted(_ sender: Any) {
        // self.pushVc(viewConterlerId: "LoginViewController")
-        let vc = (self.mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController)!
+        let vc = (self.mainStoryboard.instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController)!
         let navController = UINavigationController(rootViewController: vc)
         navController.isNavigationBarHidden = true
         self.window?.rootViewController = navController

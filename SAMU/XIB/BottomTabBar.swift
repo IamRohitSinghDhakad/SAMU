@@ -5,6 +5,17 @@
 //  Created by Rohit Singh Dhakad on 25/09/22.
 //
 
+protocol BottomTabBarDelegate{
+    
+    func btnOnChatAction(sender: UIButton)
+    
+    func btnOnHomeAction(sender: UIButton)
+    
+    func btnOnWorkAction(sender: UIButton)
+    
+    func btnOnMoreAction(sender: UIButton)
+}
+
 import UIKit
 
 class BottomTabBar: UIView {
@@ -14,6 +25,8 @@ class BottomTabBar: UIView {
     @IBOutlet weak var btnWork: UIButton!
     @IBOutlet weak var btnChat: UIButton!
     @IBOutlet weak var btnMore: UIButton!
+    
+    var delegate: BottomTabBarDelegate?
     
     override init(frame: CGRect) {
            super.init(frame: frame)
@@ -25,18 +38,18 @@ class BottomTabBar: UIView {
            commonInit()
        }
     
-    @IBAction func btnOnChat(_ sender: Any) {
-        print("Chat Pressed")
+    @IBAction func btnOnChat(_ sender: UIButton) {
+        delegate?.btnOnChatAction(sender: sender)
     }
     @IBAction func btnOnHome(_ sender: UIButton) {
-        print("Home Pressed")
+        delegate?.btnOnHomeAction(sender: sender)
     }
     
     @IBAction func btnOnWork(_ sender: UIButton) {
-        print("Work Pressed")
+        delegate?.btnOnWorkAction(sender: sender)
     }
-    @IBAction func btnOnMore(_ sender: Any) {
-        print("More Pressed")
+    @IBAction func btnOnMore(_ sender: UIButton) {
+        delegate?.btnOnMoreAction(sender: sender)
     }
     
     

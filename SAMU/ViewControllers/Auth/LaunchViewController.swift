@@ -63,7 +63,7 @@ class LaunchViewController: UIViewController {
     //MARK: - Redirection Methods
     func goToNextController() {
         if AppSharedData.sharedObject().isLoggedIn {
-            let vc = (self.mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController)!
+            let vc = (self.mainStoryboard.instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController)!
             let navController = UINavigationController(rootViewController: vc)
             navController.isNavigationBarHidden = true
             self.window?.rootViewController = navController

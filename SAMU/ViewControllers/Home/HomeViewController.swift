@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class HomeViewController: UIViewController {
-    
+
     @IBOutlet weak var vwAddress: UIView!
     @IBOutlet weak var cvAllServices: UICollectionView!
     @IBOutlet weak var lblAddress: UILabel!
@@ -56,16 +56,13 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-            let norecordView: BottomTabBar = BottomTabBar(frame: CGRect(x: self.vwContainBottomBar.frame.origin.x, y: self.vwContainBottomBar.frame.origin.y, width: self.vwContainBottomBar.frame.width - 8, height: self.vwContainBottomBar.frame.height))
-            self.view.layoutIfNeeded()
-            self.view.addSubview(norecordView)
-            self.view.layoutIfNeeded()
-        })
-        
-        
-        
-        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+//            let norecordView: BottomTabBar = BottomTabBar(frame: CGRect(x: self.vwContainBottomBar.frame.origin.x, y: self.vwContainBottomBar.frame.origin.y, width: self.vwContainBottomBar.frame.width - 8, height: self.vwContainBottomBar.frame.height))
+//            norecordView.delegate = self
+//            self.view.layoutIfNeeded()
+//            self.view.addSubview(norecordView)
+//            self.view.layoutIfNeeded()
+//        })
     }
     
     @IBAction func btnOnOpenLocationPicker(_ sender: UIButton) {
@@ -223,6 +220,26 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout{
     //        }
     //
     //    }
+    
+}
+
+extension HomeViewController : BottomTabBarDelegate{
+    
+    func btnOnChatAction(sender: UIButton) {
+        print("Navigate To Chat")
+    }
+    
+    func btnOnHomeAction(sender: UIButton) {
+        print("Navigate To Home")
+    }
+    
+    func btnOnWorkAction(sender: UIButton) {
+        print("Navigate To Work")
+    }
+    
+    func btnOnMoreAction(sender: UIButton) {
+        print("Navigate To More")
+    }
     
 }
 ///Auto Scroll logic

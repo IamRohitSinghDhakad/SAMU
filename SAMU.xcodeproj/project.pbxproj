@@ -33,6 +33,7 @@
 		F92D6A7528DE3D25004E18E2 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D6A7328DE3D25004E18E2 /* AlertViewController.swift */; };
 		F92D6A7828DE3D90004E18E2 /* MessageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D6A7728DE3D90004E18E2 /* MessageConstant.swift */; };
 		F92D6A7A28DEDDE4004E18E2 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D6A7928DEDDE4004E18E2 /* ForgotPasswordViewController.swift */; };
+		F932C8C528E601F900D1912B /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F932C8C428E601F900D1912B /* JobsViewController.swift */; };
 		F9957CFA28DF0CCD00250E2A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9957CF928DF0CCD00250E2A /* SignUpViewController.swift */; };
 		F9957D0028DF397E00250E2A /* LocationSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9957CFC28DF397E00250E2A /* LocationSearchResultsViewController.swift */; };
 		F9957D0128DF397E00250E2A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9957CFD28DF397E00250E2A /* Location.swift */; };
@@ -42,6 +43,8 @@
 		F9957D0728DF54C000250E2A /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9957D0628DF54C000250E2A /* OTPViewController.swift */; };
 		F9957D0A28DF5F8B00250E2A /* AllServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9957D0928DF5F8B00250E2A /* AllServicesCollectionViewCell.swift */; };
 		F9957D0C28E02F5200250E2A /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9957D0B28E02F5200250E2A /* SliderCollectionViewCell.swift */; };
+		F9C017C428F1C17500F383C2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C017C328F1C17500F383C2 /* TabBarViewController.swift */; };
+		F9C017C628F1FC8200F383C2 /* TabBarWithCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C017C528F1FC8200F383C2 /* TabBarWithCorners.swift */; };
 		F9F190DC28E053BB0024840B /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F190DB28E053BB0024840B /* BannerModel.swift */; };
 		F9F190DE28E064770024840B /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F190DD28E064770024840B /* CategoryModel.swift */; };
 		F9F190E128E08E9A0024840B /* BottomTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9F190E028E08E9A0024840B /* BottomTabBar.xib */; };
@@ -79,6 +82,7 @@
 		F92D6A7328DE3D25004E18E2 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		F92D6A7728DE3D90004E18E2 /* MessageConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageConstant.swift; sourceTree = "<group>"; };
 		F92D6A7928DEDDE4004E18E2 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		F932C8C428E601F900D1912B /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		F9957CF928DF0CCD00250E2A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F9957CFC28DF397E00250E2A /* LocationSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsViewController.swift; sourceTree = "<group>"; };
 		F9957CFD28DF397E00250E2A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		F9957D0628DF54C000250E2A /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		F9957D0928DF5F8B00250E2A /* AllServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F9957D0B28E02F5200250E2A /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		F9C017C328F1C17500F383C2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F9C017C528F1FC8200F383C2 /* TabBarWithCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWithCorners.swift; sourceTree = "<group>"; };
 		F9F190DB28E053BB0024840B /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		F9F190DD28E064770024840B /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		F9F190E028E08E9A0024840B /* BottomTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomTabBar.xib; sourceTree = "<group>"; };
@@ -183,6 +189,8 @@
 		F92D6A4A28DE165D004E18E2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F9C017C228F1C14E00F383C2 /* TabBarController */,
+				F932C8C328E5C02000D1912B /* Jobs */,
 				F92D6A5D28DE20E6004E18E2 /* Home */,
 				F92D6A5C28DE20D6004E18E2 /* Auth */,
 			);
@@ -281,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				F92D6A6B28DE3CF0004E18E2 /* CustomView.swift */,
+				F9C017C528F1FC8200F383C2 /* TabBarWithCorners.swift */,
 			);
 			path = IBDesignableClass;
 			sourceTree = "<group>";
@@ -302,6 +311,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		F932C8C328E5C02000D1912B /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				F932C8C428E601F900D1912B /* JobsViewController.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
 		F9957CFB28DF397E00250E2A /* LocationPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +337,14 @@
 				F9957D0B28E02F5200250E2A /* SliderCollectionViewCell.swift */,
 			);
 			path = HomeCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F9C017C228F1C14E00F383C2 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F9C017C328F1C17500F383C2 /* TabBarViewController.swift */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 		F9F190DF28E08E810024840B /* XIB */ = {
@@ -469,15 +494,18 @@
 				F9957D0A28DF5F8B00250E2A /* AllServicesCollectionViewCell.swift in Sources */,
 				F92D6A4F28DE1D79004E18E2 /* HomeViewController.swift in Sources */,
 				F9957D0228DF397E00250E2A /* LocationPickerViewController.swift in Sources */,
+				F932C8C528E601F900D1912B /* JobsViewController.swift in Sources */,
 				F9957D0C28E02F5200250E2A /* SliderCollectionViewCell.swift in Sources */,
 				F92D6A5328DE1DEB004E18E2 /* Extensions.swift in Sources */,
 				F92D6A1628DE0DE2004E18E2 /* ViewController.swift in Sources */,
 				F92D6A7028DE3CF0004E18E2 /* CustomView.swift in Sources */,
 				F92D6A5428DE1DEB004E18E2 /* TableViewExtension.swift in Sources */,
+				F9C017C428F1C17500F383C2 /* TabBarViewController.swift in Sources */,
 				F92D6A1228DE0DE2004E18E2 /* AppDelegate.swift in Sources */,
 				F92D6A5F28DE26D8004E18E2 /* WelcomeCollectionViewCell.swift in Sources */,
 				F92D6A1428DE0DE2004E18E2 /* SceneDelegate.swift in Sources */,
 				F92D6A5928DE1E40004E18E2 /* userDetailModel.swift in Sources */,
+				F9C017C628F1FC8200F383C2 /* TabBarWithCorners.swift in Sources */,
 				F92D6A4D28DE180B004E18E2 /* LaunchViewController.swift in Sources */,
 				F92D6A7428DE3D25004E18E2 /* Enums.swift in Sources */,
 				F92D6A6C28DE3CF0004E18E2 /* WebServiceManager.swift in Sources */,
