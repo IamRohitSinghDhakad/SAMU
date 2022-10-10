@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F8ACB18B8948A30B2F7B1AF4 /* Pods_SAMU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D476F0530BB748370DF17429 /* Pods_SAMU.framework */; };
+		F91BD9D728F4A06900E33D1D /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BD9D628F4A06900E33D1D /* JobDetailsViewController.swift */; };
+		F91BD9DA28F4ABFA00E33D1D /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BD9D928F4ABFA00E33D1D /* MyProfileViewController.swift */; };
+		F91BD9DC28F4AC0800E33D1D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BD9DB28F4AC0800E33D1D /* EditProfileViewController.swift */; };
 		F92D6A1228DE0DE2004E18E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D6A1128DE0DE2004E18E2 /* AppDelegate.swift */; };
 		F92D6A1428DE0DE2004E18E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D6A1328DE0DE2004E18E2 /* SceneDelegate.swift */; };
 		F92D6A1628DE0DE2004E18E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D6A1528DE0DE2004E18E2 /* ViewController.swift */; };
@@ -43,6 +46,12 @@
 		F9957D0728DF54C000250E2A /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9957D0628DF54C000250E2A /* OTPViewController.swift */; };
 		F9957D0A28DF5F8B00250E2A /* AllServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9957D0928DF5F8B00250E2A /* AllServicesCollectionViewCell.swift */; };
 		F9957D0C28E02F5200250E2A /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9957D0B28E02F5200250E2A /* SliderCollectionViewCell.swift */; };
+		F9BE376528F3F9FD00E5C221 /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE376428F3F9FD00E5C221 /* JobsTableViewCell.swift */; };
+		F9BE376828F4017100E5C221 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE376728F4017100E5C221 /* ChatListViewController.swift */; };
+		F9BE376A28F4059100E5C221 /* ChatListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE376928F4059100E5C221 /* ChatListModel.swift */; };
+		F9BE376C28F4062F00E5C221 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE376B28F4062F00E5C221 /* ChatListTableViewCell.swift */; };
+		F9BE376F28F40A1800E5C221 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE376E28F40A1800E5C221 /* MoreViewController.swift */; };
+		F9BE377128F40D6C00E5C221 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE377028F40D6C00E5C221 /* MoreTableViewCell.swift */; };
 		F9C017C428F1C17500F383C2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C017C328F1C17500F383C2 /* TabBarViewController.swift */; };
 		F9C017C628F1FC8200F383C2 /* TabBarWithCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C017C528F1FC8200F383C2 /* TabBarWithCorners.swift */; };
 		F9F190DC28E053BB0024840B /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F190DB28E053BB0024840B /* BannerModel.swift */; };
@@ -55,6 +64,9 @@
 		1FB32A9D559728ABEFABFF9A /* Pods-SAMU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAMU.release.xcconfig"; path = "Target Support Files/Pods-SAMU/Pods-SAMU.release.xcconfig"; sourceTree = "<group>"; };
 		D4204B07FB7FEAF7481BABEC /* Pods-SAMU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAMU.debug.xcconfig"; path = "Target Support Files/Pods-SAMU/Pods-SAMU.debug.xcconfig"; sourceTree = "<group>"; };
 		D476F0530BB748370DF17429 /* Pods_SAMU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAMU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91BD9D628F4A06900E33D1D /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
+		F91BD9D928F4ABFA00E33D1D /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		F91BD9DB28F4AC0800E33D1D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		F92D6A0E28DE0DE2004E18E2 /* SAMU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAMU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92D6A1128DE0DE2004E18E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F92D6A1328DE0DE2004E18E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +104,12 @@
 		F9957D0628DF54C000250E2A /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		F9957D0928DF5F8B00250E2A /* AllServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F9957D0B28E02F5200250E2A /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		F9BE376428F3F9FD00E5C221 /* JobsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
+		F9BE376728F4017100E5C221 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		F9BE376928F4059100E5C221 /* ChatListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListModel.swift; sourceTree = "<group>"; };
+		F9BE376B28F4062F00E5C221 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
+		F9BE376E28F40A1800E5C221 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		F9BE377028F40D6C00E5C221 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		F9C017C328F1C17500F383C2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F9C017C528F1FC8200F383C2 /* TabBarWithCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWithCorners.swift; sourceTree = "<group>"; };
 		F9F190DB28E053BB0024840B /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
@@ -127,6 +145,15 @@
 				D476F0530BB748370DF17429 /* Pods_SAMU.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F91BD9D828F4ABE600E33D1D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F91BD9D928F4ABFA00E33D1D /* MyProfileViewController.swift */,
+				F91BD9DB28F4AC0800E33D1D /* EditProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F92D6A0528DE0DE2004E18E2 = {
@@ -189,6 +216,9 @@
 		F92D6A4A28DE165D004E18E2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F91BD9D828F4ABE600E33D1D /* Profile */,
+				F9BE376D28F40A0400E5C221 /* More */,
+				F9BE376628F4015300E5C221 /* Chat */,
 				F9C017C228F1C14E00F383C2 /* TabBarController */,
 				F932C8C328E5C02000D1912B /* Jobs */,
 				F92D6A5D28DE20E6004E18E2 /* Home */,
@@ -203,6 +233,7 @@
 				F92D6A5828DE1E40004E18E2 /* userDetailModel.swift */,
 				F9F190DB28E053BB0024840B /* BannerModel.swift */,
 				F9F190DD28E064770024840B /* CategoryModel.swift */,
+				F9BE376928F4059100E5C221 /* ChatListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				F932C8C428E601F900D1912B /* JobsViewController.swift */,
+				F9BE376428F3F9FD00E5C221 /* JobsTableViewCell.swift */,
+				F91BD9D628F4A06900E33D1D /* JobDetailsViewController.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -337,6 +370,24 @@
 				F9957D0B28E02F5200250E2A /* SliderCollectionViewCell.swift */,
 			);
 			path = HomeCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F9BE376628F4015300E5C221 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				F9BE376728F4017100E5C221 /* ChatListViewController.swift */,
+				F9BE376B28F4062F00E5C221 /* ChatListTableViewCell.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		F9BE376D28F40A0400E5C221 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				F9BE376E28F40A1800E5C221 /* MoreViewController.swift */,
+				F9BE377028F40D6C00E5C221 /* MoreTableViewCell.swift */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 		F9C017C228F1C14E00F383C2 /* TabBarController */ = {
@@ -474,21 +525,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91BD9DC28F4AC0800E33D1D /* EditProfileViewController.swift in Sources */,
 				F9F190DE28E064770024840B /* CategoryModel.swift in Sources */,
 				F9957CFA28DF0CCD00250E2A /* SignUpViewController.swift in Sources */,
 				F92D6A6D28DE3CF0004E18E2 /* WebServiceHelper.swift in Sources */,
 				F92D6A6F28DE3CF0004E18E2 /* RDTextView.swift in Sources */,
 				F92D6A6128DE381E004E18E2 /* LoginViewController.swift in Sources */,
 				F9957D0328DF397E00250E2A /* SearchHistoryManager.swift in Sources */,
+				F9BE376C28F4062F00E5C221 /* ChatListTableViewCell.swift in Sources */,
 				F9957D0028DF397E00250E2A /* LocationSearchResultsViewController.swift in Sources */,
 				F92D6A7828DE3D90004E18E2 /* MessageConstant.swift in Sources */,
+				F91BD9DA28F4ABFA00E33D1D /* MyProfileViewController.swift in Sources */,
 				F92D6A5728DE1E14004E18E2 /* AppSharedData.swift in Sources */,
+				F9BE376828F4017100E5C221 /* ChatListViewController.swift in Sources */,
 				F92D6A7528DE3D25004E18E2 /* AlertViewController.swift in Sources */,
 				F9F190DC28E053BB0024840B /* BannerModel.swift in Sources */,
 				F92D6A6E28DE3CF0004E18E2 /* FloatRatingView.swift in Sources */,
 				F92D6A5B28DE20D3004E18E2 /* WelcomeViewController.swift in Sources */,
 				F9957D0128DF397E00250E2A /* Location.swift in Sources */,
 				F9F190E328E08FB80024840B /* BottomTabBar.swift in Sources */,
+				F9BE376528F3F9FD00E5C221 /* JobsTableViewCell.swift in Sources */,
 				F9957D0728DF54C000250E2A /* OTPViewController.swift in Sources */,
 				F92D6A7A28DEDDE4004E18E2 /* ForgotPasswordViewController.swift in Sources */,
 				F9957D0A28DF5F8B00250E2A /* AllServicesCollectionViewCell.swift in Sources */,
@@ -496,10 +552,14 @@
 				F9957D0228DF397E00250E2A /* LocationPickerViewController.swift in Sources */,
 				F932C8C528E601F900D1912B /* JobsViewController.swift in Sources */,
 				F9957D0C28E02F5200250E2A /* SliderCollectionViewCell.swift in Sources */,
+				F9BE377128F40D6C00E5C221 /* MoreTableViewCell.swift in Sources */,
 				F92D6A5328DE1DEB004E18E2 /* Extensions.swift in Sources */,
+				F9BE376A28F4059100E5C221 /* ChatListModel.swift in Sources */,
 				F92D6A1628DE0DE2004E18E2 /* ViewController.swift in Sources */,
 				F92D6A7028DE3CF0004E18E2 /* CustomView.swift in Sources */,
 				F92D6A5428DE1DEB004E18E2 /* TableViewExtension.swift in Sources */,
+				F91BD9D728F4A06900E33D1D /* JobDetailsViewController.swift in Sources */,
+				F9BE376F28F40A1800E5C221 /* MoreViewController.swift in Sources */,
 				F9C017C428F1C17500F383C2 /* TabBarViewController.swift in Sources */,
 				F92D6A1228DE0DE2004E18E2 /* AppDelegate.swift in Sources */,
 				F92D6A5F28DE26D8004E18E2 /* WelcomeCollectionViewCell.swift in Sources */,

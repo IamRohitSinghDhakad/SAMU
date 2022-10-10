@@ -51,21 +51,24 @@ import UIKit
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.isTranslucent = true
-        var tabFrame            = self.frame
-        let keyWindow = UIApplication.shared.connectedScenes
-                .filter({$0.activationState == .foregroundActive})
-                .compactMap({$0 as? UIWindowScene})
-                .first?.windows
-                .filter({$0.isKeyWindow}).first
-        tabFrame.size.height    = 30 + (keyWindow?.safeAreaInsets.bottom ?? CGFloat.zero)
-        tabFrame.origin.y       = self.frame.origin.y + ( self.frame.height - 40 - (keyWindow?.safeAreaInsets.bottom ?? CGFloat.zero))
-        self.layer.cornerRadius = 20
-        self.frame            = tabFrame
-
-
-
-        self.items?.forEach({ $0.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: -5.0) })
+//        self.isTranslucent = true
+//        var tabFrame            = self.frame
+//        let keyWindow = UIApplication.shared.connectedScenes
+//                .filter({$0.activationState == .foregroundActive})
+//                .compactMap({$0 as? UIWindowScene})
+//                .first?.windows
+//                .filter({$0.isKeyWindow}).first
+//        
+//        print("Before===========>>>>> ", tabFrame.origin.y)
+//        tabFrame.size.height    = 30 + (keyWindow?.safeAreaInsets.bottom ?? CGFloat.zero)
+//        tabFrame.origin.y       = self.frame.origin.y + ( self.frame.height - 40 - (keyWindow?.safeAreaInsets.bottom ?? CGFloat.zero))
+//        print("After ==========>>>>> ", tabFrame.origin.y)
+//        self.layer.cornerRadius = 20
+//        self.frame            = tabFrame
+//
+//
+//
+//        self.items?.forEach({ $0.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: -5.0) })
 
 
     }

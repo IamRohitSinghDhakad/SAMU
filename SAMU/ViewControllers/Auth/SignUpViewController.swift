@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController, CLLocationManagerDelegate {
     var destinationLatitude = Double()
     var destinationLongitude = Double()
     var datePicker = UIDatePicker()
+    
     private var locationManager:CLLocationManager?
     var location: Location? {
         didSet {

@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var vwAddress: UIView!
     @IBOutlet weak var cvAllServices: UICollectionView!
@@ -29,9 +29,50 @@ class HomeViewController: UIViewController {
     var pageIndexCVOne = 1
     var pageIndexCVTwo = 1
     
+    var destinationLatitude = Double()
+    var destinationLongitude = Double()
+    
+    private var locationManager:CLLocationManager?
+    var location: Location? {
+        didSet {
+            self.lblAddress.text = location.flatMap({ $0.title }) ?? "No location selected"
+            let cordinates = location.flatMap({ $0.coordinate })
+            if (cordinates != nil){
+              
+                destinationLatitude = cordinates?.latitude ?? 0.0
+                destinationLongitude = cordinates?.longitude ?? 0.0
+                
+                var xCordinate = ""
+                var yCordinate = ""
+                
+                if let latitude = cordinates?.latitude {
+                    xCordinate = "\(latitude)"
+                }
+                if let longitude = cordinates?.longitude{
+                    yCordinate = "\(longitude)"
+                }
+                
+                self.getAddressFromLatLong(plLatitude: xCordinate, plLongitude: yCordinate, completion: { (dictAddress) in
+
+                    
+                    if let fullAddress = dictAddress["fullAddress"]as? String{
+                        self.lblAddress.text = fullAddress
+                    }else{
+                        self.lblAddress.text = dictAddress["country"]as? String ?? ""
+                    }
+                    
+                    
+                }) { (Error) in
+                    print(Error)
+                }
+            }
+           
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getUserLocation()
         self.vwAddress.isHidden = true
         self.cvAllServices.delegate = self
         self.cvAllServices.dataSource = self
@@ -48,32 +89,54 @@ class HomeViewController: UIViewController {
         
         self.call_WsGetBanner()
         self.call_WsGetCategory()
-        
-        
-       
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-//            let norecordView: BottomTabBar = BottomTabBar(frame: CGRect(x: self.vwContainBottomBar.frame.origin.x, y: self.vwContainBottomBar.frame.origin.y, width: self.vwContainBottomBar.frame.width - 8, height: self.vwContainBottomBar.frame.height))
-//            norecordView.delegate = self
-//            self.view.layoutIfNeeded()
-//            self.view.addSubview(norecordView)
-//            self.view.layoutIfNeeded()
-//        })
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    func getUserLocation() {
+            locationManager = CLLocationManager()
+            locationManager?.delegate = self
+            locationManager?.requestWhenInUseAuthorization()
+            locationManager?.startUpdatingLocation()
+        }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            self.getAddressFromLatLong(plLatitude: "\(location.coordinate.latitude)", plLongitude: "\(location.coordinate.longitude)", completion: { (dictAddress) in
+
+                if let fullAddress = dictAddress["fullAddress"]as? String{
+                    self.lblAddress.text = fullAddress
+                }else{
+                    self.lblAddress.text = dictAddress["country"]as? String ?? ""
+                }
+            }) { (Error) in
+                print(Error)
+            }
+        }
     }
     
     @IBAction func btnOnOpenLocationPicker(_ sender: UIButton) {
-        
+        self.navigationController?.navigationBar.isHidden = false
+        let sb = UIStoryboard.init(name: "LocationPicker", bundle: Bundle.main)
+        let locationPicker = sb.instantiateViewController(withIdentifier: "LocationPickerViewController")as! LocationPickerViewController
+        locationPicker.location = location
+        locationPicker.showCurrentLocationButton = true
+        locationPicker.useCurrentLocationAsHint = true
+        locationPicker.selectCurrentLocationInitially = true
+        locationPicker.completion = { self.location = $0 }
+        self.navigationController?.pushViewController(locationPicker, animated: true)
     }
     
     @IBAction func btnGotoProfile(_ sender: UIButton) {
+        pushVc(viewConterlerId: "MyProfileViewController")
         
     }
     @IBAction func btnShowAddress(_ sender: UIButton) {
-        self.vwAddress.isHidden = self.vwAddress.isHidden ? true : false
+        self.vwAddress.isHidden = self.vwAddress.isHidden == false ? true : false
     }
 }
 
@@ -364,6 +427,79 @@ extension HomeViewController{
             print(Error)
             objWebServiceManager.hideIndicator()
         }
+        
+    }
+}
+
+
+extension HomeViewController{
+    func getAddressFromLatLong(plLatitude: String, plLongitude: String, completion:@escaping(Dictionary<String,Any>) ->Void, failure:@escaping (Error) ->Void){
+        
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+        let lat: Double = Double("\(plLatitude)")!
+    
+        let lon: Double = Double("\(plLongitude)")!
+    
+        let ceo: CLGeocoder = CLGeocoder()
+        center.latitude = lat
+        center.longitude = lon
+        
+        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
+        
+        
+        ceo.reverseGeocodeLocation(loc, completionHandler:
+            {(placemarks, error) in
+                if (error != nil)
+                {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                }
+                
+                
+                let pm = (placemarks ?? []) as [CLPlacemark]
+                
+                if pm.count > 0 {
+                    let pm = placemarks?[0]
+                    print(pm?.country ?? "")
+                    print(pm?.locality ?? "")
+                    print(pm?.subLocality ?? "")
+                    print(pm?.thoroughfare ?? "")
+                    print(pm?.postalCode ?? "")
+                    print(pm?.subThoroughfare ?? "")
+                    
+                    var dictAddress = [String:Any]()
+                    var addressString : String = ""
+                    
+                    if pm?.subLocality != nil {
+                        addressString = addressString + (pm?.subLocality!)! + ", "
+                        dictAddress["subLocality"] = pm?.subLocality
+                    }
+                    if pm?.thoroughfare != nil {
+                        addressString = addressString + (pm?.thoroughfare!)! + ", "
+                        dictAddress["thoroughfare"] = pm?.thoroughfare
+                    }
+                    if pm?.locality != nil {
+                        addressString = addressString + (pm?.locality!)! + ", "
+                        dictAddress["locality"] = pm?.locality
+                    }
+                    if pm?.country != nil {
+                        addressString = addressString + (pm?.country!)! + ", "
+                        dictAddress["country"] = pm?.country
+                    }
+                    if pm?.postalCode != nil {
+                        addressString = addressString + (pm?.postalCode!)! + " "
+                        dictAddress["fullAddress"] = addressString
+                    }
+                    
+                    
+                    if dictAddress.count != 0{
+                        completion(dictAddress)
+                    }else{
+                        
+                        //failure("Something Wrong Happend! please dubug code :)" as? Error)
+                    }
+                    
+                }
+        })
         
     }
 }
