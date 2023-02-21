@@ -132,7 +132,9 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func btnGotoProfile(_ sender: UIButton) {
-        pushVc(viewConterlerId: "MyProfileViewController")
+        //pushVc(viewConterlerId: "MyProfileViewController")
+        pushVc(viewConterlerId: "BaseViewController")
+        
         
     }
     @IBAction func btnShowAddress(_ sender: UIButton) {

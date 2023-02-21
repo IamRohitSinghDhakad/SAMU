@@ -193,6 +193,16 @@ extension UIView{
         self.layer.cornerRadius = corner
         self.layer.shadowColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)
     }
+    
+    func addShadowLikeCardView(corner:CGFloat) {
+        self.layer.cornerRadius = corner
+        self.layer.shadowColor = UIColor.gray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+        self.layer.shadowRadius = 7
+        self.layer.shadowOpacity = 0.4
+    }
+    
+   
 }
 
 

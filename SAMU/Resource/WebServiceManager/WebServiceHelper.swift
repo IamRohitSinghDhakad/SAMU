@@ -17,6 +17,9 @@ struct WsUrl{
     static let url_GetBanner  = BASE_URL + "get_banner"
     static let url_GetCategory = BASE_URL + "get_category"
     static let url_GetProfile = BASE_URL + "get_profile"
+    static let url_getChatList = BASE_URL + "get_chat"
+    static let url_insertChat = BASE_URL + "insert_chat"
+    static let url_deleteChatSingleMessage = BASE_URL + "delete_message"
     static let url_Logout = BASE_URL + "logout"
 }
 

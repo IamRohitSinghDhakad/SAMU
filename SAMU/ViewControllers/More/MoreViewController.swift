@@ -41,9 +41,11 @@ extension MoreViewController:UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     
-    /*
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "WebViewShowViewController")as! WebViewShowViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        /*
         switch indexPath.row {
         case 0:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "WebViewShowViewController")as! WebViewShowViewController
@@ -94,8 +96,9 @@ extension MoreViewController:UITableViewDelegate,UITableViewDataSource{
             }
             
         }
+         */
     }
-    */
+  
     
     
 }
